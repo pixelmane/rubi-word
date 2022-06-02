@@ -11,3 +11,107 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+ h1 {
+   color: black;
+ }
+
+ [id^=square] {
+   height: 100px;
+   width: 100px;
+   background-color: aqua;
+   width: 90px;
+   font-size: 40px;
+ }
+
+ [id^=square]:active {
+   background-color: beige;
+   border: 3px solid black;
+ }
+ #gameBoard {
+   display: flex;
+   flex-wrap: wrap;
+   width: 300px;
+ }
+
+ #entry {
+   display: flex;
+   width: 270px;
+   height: 50px;
+   background-color: lightblue;
+   justify-content: center;
+   align-items: center ;
+   font-size: 25px;
+   font-weight: bold;
+
+ }
+
+ #erase {
+   width: 270px;
+   height: 50px;
+   font-size: 25px;
+ }
+
+ #delete {
+   width: 135px;
+   height: 50px;
+ }
+
+ #enter {
+   width: 135px;
+   height: 50px;
+ }
+#enterErase {
+  display: flex;
+  width: 270px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  
+}
+#list {
+  display: grid;
+  align-content: flex-start;
+}
+#list h4 {
+  
+  margin: 0;
+}
+#root {
+  width: 100vw;
+  
+}
+#main {
+  display: flex;
+  width: 300px;
+}
+#alertCont {
+  
+  position:absolute;
+  top: 60px;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  width: 270px;
+  color: white;
+
+  
+}
+ #alert {
+  
+   
+    padding: 5px;
+   text-align: center;
+   border: 3px solid white;
+   border-radius: 10px;
+   
+   background-color: aquamarine;
+ }
