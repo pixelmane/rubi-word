@@ -226,7 +226,7 @@ class App extends React.Component {
       if(this.state.guess.length < 4){
         console.log('work')
 
-        this.messageCreate()
+        this.messageCreate('Word Too Tiny')
         
       }else if (this.state.guess.indexOf('B') > -1){
         
