@@ -266,7 +266,7 @@ class App extends React.Component {
       }
     
   } else {
-    alert('no usage of main letter')
+    this.messageCreate('missing main letter')
   }
   this.setState({
     guess: [],
