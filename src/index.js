@@ -518,11 +518,31 @@ class App extends React.Component {
      alreadyGuessedList: [],
      message: 'well guess something',
      score: 0,
-    }  
+     percentComplete: 0,
+    } 
+    this.percentCalc = this.percentCalc.bind(this); 
     this.handleClick = this.handleClick.bind(this);
     this.clearGuess = this.clearGuess.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleGuess = this.handleGuess.bind(this)
+    }
+    percentCalc() {
+      let one = this.state.wordBank
+      let two = this.state.alreadyGuessed
+      let total = 0;
+      for(let i = 0; i < one.length; i++){
+        total += one[i].length * one[i].length
+      }
+      for(let l = 0; l < two.length; l++){
+        total += two[l].length * two[l].length 
+      }
+      let percComp = this.state.score/total
+      percComp = percComp*100;
+      percComp = percComp.toFixed(2)
+      console.log(`${total} ${percComp} is th efuture`)
+      this.setState({
+        percentComplete: percComp
+      })
     }
     handleClick(value){
       let guess = this.state.guess.slice()
@@ -598,10 +618,10 @@ class App extends React.Component {
         this.messageCreate(`fuck yeah +${newScore}`)
         console.log(guess.length)
        alreadyGuessed.push(guess)
-        wordBank.splice(wordBank.indexOf(guess), 1, null)
+        wordBank.splice(wordBank.indexOf(guess), 1, '')
         console.log(alreadyGuessed)
         console.log(wordBank)
-        
+        this.percentCalc()
         this.setState({
           wordBank: wordBank,
           alreadyGuessed: alreadyGuessed,
@@ -630,7 +650,7 @@ class App extends React.Component {
       <div id="main">
       <div>
         <Alert value={this.state.message}/>
-        <Score value={this.state.score}/>
+        <Score percComp={this.state.percentComplete} value={this.state.score}/>
         <Entry guess={this.state.guess}/>
         <Square onClick={this.handleClick} />
         <div id="enterErase">
@@ -643,6 +663,9 @@ class App extends React.Component {
       
       </div>
     )
+  }
+  componentDidMount() {
+    alert('Rules: Use the gameboard to make as many words as possible.  Center letter must be in word.  Each letter may be used up to two times per guess.')
   }
 }
 

@@ -9,10 +9,9 @@ export class Score extends React.Component {
             <h1>{this.props.value}</h1>
             </div>
             <div id="totalCont">
-            <h4>Total Possible:</h4>
-            <h1>{this.props.value}</h1>
-            <h4>Total Possible:</h4>
-            <h1>{this.props.value}</h1>
+            
+            <h4>% Complete:</h4>
+            <h1>%{this.props.percComp}</h1>
             </div>
             
             </div>
