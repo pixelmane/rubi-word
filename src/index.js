@@ -16,7 +16,7 @@ class App extends React.Component {
     super(props);
     this.state = {
      guess: [],
-     wordBank: ["DAGGERBOARD",
+     wordBank: ["GRAB", "DAGGERBOARD",
      "LABRADOODLE",
      "LEADERBOARD",
      "LONGBOARDER",
