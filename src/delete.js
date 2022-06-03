@@ -9,7 +9,7 @@ export class Delete extends React.Component {
     
     render() {
         return (
-            <button onClick={this.props.onClick} id="delete">--</button>
+            <button onClick={this.props.onClick} id="delete">Del</button>
         )
     }
 }
