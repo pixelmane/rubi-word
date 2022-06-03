@@ -665,7 +665,7 @@ class App extends React.Component {
     )
   }
   componentDidMount() {
-    alert('Rules: Use the gameboard to make as many words as possible.  Center letter must be in word.  Each letter may be used up to two times per guess.')
+    alert('Rules: Use the gameboard to make as many words as possible.  Center letter must be in each word.  Letters may be used up to two times per guess.')
   }
 }
 
