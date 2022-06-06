@@ -15,15 +15,19 @@ export class Square extends React.Component {
     render() {
         return (
             <div id="gameBoard">
-            <button onClick={this.handleClick} value="L" id="square1">L</button>
-            <button onClick={this.handleClick} value="G" id="square2">G</button>
-            <button onClick={this.handleClick} value="R" id="square3">R</button>
-            <button onClick={this.handleClick} value="A" id="square4">A</button>
-            <button onClick={this.handleClick} value="B" id="square5">B</button>
-            <button onClick={this.handleClick} value="D" id="square6">D</button>
-            <button onClick={this.handleClick} value="E" id="square7">E</button>
-            <button onClick={this.handleClick} value="N" id="square8">N</button>
+                <div className="lineCont">
+            <button onClick={this.handleClick} value="T" id="square1">T</button>
+            <button onClick={this.handleClick} value="A" id="square3">A</button>
+           </div>
+           <div className="lineCont">
+            <button onClick={this.handleClick} value="Y" id="square4">Y</button>
+            <button onClick={this.handleClick} value="S" id="square5">S</button>
+            <button onClick={this.handleClick} value="R" id="square6">R</button>
+            </div>
+            <div className="lineCont">
+            <button onClick={this.handleClick} value="L" id="square7">L</button>
             <button onClick={this.handleClick} value="O" id="square9">O</button>
+            </div>
             </div>
         )
     }

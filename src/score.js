@@ -10,8 +10,8 @@ export class Score extends React.Component {
             </div>
             <div id="totalCont">
             
-            <h4>% Complete:</h4>
-            <h1>%{this.props.percComp}</h1>
+            <h4>Status</h4>
+            <h1>{this.props.percComp}</h1>
             </div>
             
             </div>

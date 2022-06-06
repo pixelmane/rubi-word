@@ -21,17 +21,28 @@ code {
    display: grid;
    justify-content: center;
    align-items: center;
-   height: 100px;
-   width: 100px;
+   height: 80px;
+   width: 80px;
    background-color: yellow;
-   width: 90px;
+   
    font-size: 40px;
-   border-radius: 10px;
-   margin: 5px;
-   border: 3px dashed black;
+   border-radius: 50%;
+   margin: 2.5px 5px;
+   border: 3px solid black;
    color: black;
- }
+    line-height: 0px;
+  }
+#square5 {
+  color: yellow;
+  background-color: black;
+  border: 3px dashed yellow;
+}
 
+#square5:active {
+  background-color: white;
+   border: 3px solid black;
+   color: black;
+}
  [id^=square]:active {
    background-color: black;
    border: 3px solid black;
@@ -67,6 +78,9 @@ code {
    color: black;
    border-radius: 10px;
    border: 3px solid black;
+   font-size: 25px;
+   height: 38px;
+   
  }
 
 #totalCont h4 {
@@ -122,9 +136,13 @@ code {
    font-size: 25px;
    border-radius: 10px;
    margin: 5px;
-   border: 3px dashed black;
+   border: 3px solid black;
  }
-
+.lineCont {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
  #delete:active {
    background-color: black;
    border: 3px solid yellow;
@@ -142,10 +160,12 @@ code {
    font-size: 25px;
    border-radius: 10px;
    margin: 5px;
-   border: 3px dashed black;
+   border: 3px solid black;
+   
 
  }
 #enterErase {
+  margin-top: 10px;
   display: flex;
   width: 300px;
   justify-content: space-between;
